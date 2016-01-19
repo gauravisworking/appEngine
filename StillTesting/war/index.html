@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>Home Automation Configuration</title>
+
+<link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css" />
+<script type="text/javascript" src="extjs/adapter/ext/ext-base.js"></script>
+<script type="text/javascript" src="extjs/ext-all.js"></script>
+
+<style type="text/css">
+html,body {
+	font: normal 12px verdana;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	overflow: hidden;
+	height: 100%;
+}
+
+p {
+	margin: 5px;
+}
+
+.settings {
+	background-image: url(extjs/examples/shared/icons/fam/folder_wrench.png);
+}
+
+.nav {
+	background-image: url(extjs/examples/shared/icons/fam/folder_go.png);
+}
+</style>
+<script type="text/javascript" src="js/user/manageUser.js"></script>
+<script type="text/javascript" src="js/configurations/manageConfigurations.js"></script>
+<script type="text/javascript" src="js/centerPanel/centerPanel.js"></script>
+
+<script type="text/javascript">
+
+	Ext.onReady(function() {
+		Ext.QuickTips.init();
+		
+		
+		viewport = new Ext.Viewport({
+			layout : 'border',
+			items : [ new Ext.BoxComponent({
+				region : 'north',
+				id : 'noth-panel',
+				height : 32,
+				items : [
+
+				]
+			}), {
+				region : 'west',
+				title : 'House',
+				id : 'west-panel',
+				collapsible : true,
+				split : true,
+				width : 225,
+				minSize : 175,
+				tbar : tb,
+				maxSize : 400,
+				margins : '0 5 0 0',
+				layout : 'fit',
+				items : tree
+
+			}/* , {
+				region : 'east',
+				id : 'east-panel',
+				title : 'Configurations',
+				split : true,
+				width : 200,
+				minSize : 175,
+				maxSize : 400,
+				collapsible : true,
+				margins : '0 0 0 5',
+				layout : {
+					type : 'accordion',
+					animate : true
+				},
+				items : [ {
+					contentEl : 'west',
+					title : 'Navigation',
+					border : false,
+					iconCls : 'nav'
+				}, {
+					title : 'Settings',
+					html : '<p>Some settings in here.</p>',
+					border : false,
+					iconCls : 'settings'
+				} ]
+			} */, new Ext.TabPanel({
+				region : 'center',
+				deferredRender : false,
+				id : 'center-panel'
+			}) ]
+		});
+		Ext.get("hideit").on('click', function() {
+			var w = Ext.getCmp('west-panel');
+			w.collapsed ? w.expand() : w.collapse();
+		});
+	});
+</script>
+
+</head>
+<body>
+	<!-- use class="x-hide-display" to prevent a brief flicker of the content -->
+	<div id="west" class="x-hide-display">
+		<p></p>
+	</div>
+	<div id="center2" class="x-hide-display">
+		<a id="hideit" href="#">Toggle the west region</a>
+	</div>
+	<div id="center1" class="x-hide-display"></div>
+	<div id="props-panel" class="x-hide-display"
+		style="width: 200px; height: 200px; overflow: hidden;"></div>
+	<div id="south" class="x-hide-display"></div>
+</body>
+</html>

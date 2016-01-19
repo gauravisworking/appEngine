@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+   
+  <servlet>
+    <servlet-name>getAvailablePinsForAction</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.GetAvailablePinsForAction</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getAvailablePinsForAction</servlet-name>
+    <url-pattern>/testhellwworld/getAvailablePinsForAction</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+    <servlet-name>getActionForPointType</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.GetActionForPointType</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getActionForPointType</servlet-name>
+    <url-pattern>/testhellwworld/getActionForPointType</url-pattern>
+  </servlet-mapping>
+  
+      
+  <servlet>
+    <servlet-name>getPointTypeList</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.GetPointTypeList</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getPointTypeList</servlet-name>
+    <url-pattern>/testhellwworld/getPointTypeList</url-pattern>
+  </servlet-mapping>
+  
+    
+  <servlet>
+    <servlet-name>getDeviceTypeList</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.GetDeviceTypeList</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getDeviceTypeList</servlet-name>
+    <url-pattern>/testhellwworld/getDeviceTypeList</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>getBoardsForRoom</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.GetBoardsForRoom</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getBoardsForRoom</servlet-name>
+    <url-pattern>/testhellwworld/getBoardsforRoom</url-pattern>
+  </servlet-mapping>    
+  <servlet>
+    <servlet-name>addBoard</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.AddBoard</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>addBoard</servlet-name>
+    <url-pattern>/testhellwworld/addBoard</url-pattern>
+  </servlet-mapping> 
+  
+  
+  <servlet>
+    <servlet-name>getAllHouses</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.GetAllHouses</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getAllHouses</servlet-name>
+    <url-pattern>/testhellwworld/getAllHouses</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>authClient</servlet-name>
+    <servlet-class>com.test.helloWorld.webservice.Authenticate</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>authClient</servlet-name>
+    <url-pattern>/testhellwworld/authUser</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>getClient</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.GetClient</servlet-class>
+  </servlet>
+  
+   <servlet>
+    <servlet-name>publishHouseJson</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.PublishHouseJson</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>publishHouseJson</servlet-name>
+    <url-pattern>/testhellwworld/publishHouseJson</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>getClient</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.GetClient</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getClient</servlet-name>
+    <url-pattern>/testhellwworld/getClient</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>com.test.helloWorld.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/testhellwworld/greet</url-pattern>
+  </servlet-mapping>
+ 
+  
+  <servlet>
+    <servlet-name>addHouse</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.AddHouse</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>addHouse</servlet-name>
+    <url-pattern>/testhellwworld/addHouse</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>getRooms</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.GetRoomsForHouse</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getRooms</servlet-name>
+    <url-pattern>/testhellwworld/getRooms</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <servlet-name>addRooms</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.AddRooms</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>addRooms</servlet-name>
+    <url-pattern>/testhellwworld/addRooms</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>addPoints</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.AddPoint</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>addPoints</servlet-name>
+    <url-pattern>/testhellwworld/addPoints</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>getPoints</servlet-name>
+    <servlet-class>com.test.helloWorld.servlet.GetAllPointsForBaord</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>getPoints</servlet-name>
+    <url-pattern>/testhellwworld/getPoints</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <!-- <welcome-file-list>
+    <welcome-file>TestHellwWorld.html</welcome-file>
+  </welcome-file-list> -->
+
+
+<servlet>
+        <servlet-name>sign</servlet-name>
+        <servlet-class>com.test.helloWorld.db.GuestbookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sign</servlet-name>
+        <url-pattern>/sign</url-pattern>
+    </servlet-mapping>
+    
+
+    
+   <servlet>
+	  <servlet-name>Jersey Web Application</servlet-name>
+	   <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+	   <init-param>
+	   <param-name>com.sun.jersey.config.property.packages</param-name>
+	   <param-value>com.test.helloWorld.webservice</param-value>
+	   </init-param>
+	   <load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+	  <servlet-name>Jersey Web Application</servlet-name>
+	  <url-pattern>/resources/*</url-pattern>
+	</servlet-mapping>
+	 <servlet-mapping>
+	  <servlet-name>Jersey Web Application</servlet-name>
+	  <url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+      
+</web-app>
